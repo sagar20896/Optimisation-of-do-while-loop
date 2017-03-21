@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 %}
-%token ID NUM DO WHILE LE GE EQ NE OR AND
+%token ID NUM DO WHILE LE GE EQ NE OR AND STR_CONST KEYWORD
 %right '='
 %left AND OR
 %left '<' '>' LE GE EQ NE
@@ -52,4 +52,12 @@ main()
 {
    printf("Enter the exp: ");
    yyparse();
+
+   printf("Sr. num\t\t\tName\t\t\tValue\t\t\tLine number");
+   printf("\n");
+   int i = 0;
+   for (i = 0; i < sym_table_length; ++i) {
+       printf("%d\t\t\t%s\t\t\t%s\t\t\t%d", (i+1), table[i].name, table[i].value, table[i].line_number);
+       printf("\n");
+   }
 }

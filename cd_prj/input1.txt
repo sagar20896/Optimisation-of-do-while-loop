@@ -1,0 +1,7 @@
+while(a<b)
+{
+	a = a + 1;
+	b = b+1;
+	int j = 10;
+	int k = 100;
+

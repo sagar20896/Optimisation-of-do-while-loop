@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -45,39 +45,85 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    ID = 258,
-    NUM = 259,
-    DO = 260,
-    WHILE = 261,
-    LE = 262,
-    GE = 263,
-    EQ = 264,
-    NE = 265,
-    OR = 266,
-    AND = 267,
-    STR_CONST = 268,
-    KEYWORD = 269,
-    UMINUS = 270
+    BREAK_KEYWORD = 258,
+    RETURN_KEYWORD = 259,
+    VOID_KEYWORD = 260,
+    FLOAT_KEYWORD = 261,
+    CHAR_KEYWORD = 262,
+    WHILE_KEYWORD = 263,
+    INT_KEYWORD = 264,
+    DOUBLE_KEYWORD = 265,
+    IDENTIFIER = 266,
+    INTEGER_CONSTANT = 267,
+    FLOAT_CONSTANT = 268,
+    CHAR_CONSTANT = 269,
+    STRING_LITERAL = 270,
+    PLUS_PLUS = 271,
+    MINUS_MINUS = 272,
+    LEFT_SHIFT = 273,
+    RIGHT_SHIFT = 274,
+    LESS_EQUAL = 275,
+    GREATER_EQUAL = 276,
+    EQUAL_EQUAL = 277,
+    NOT_EQUAL = 278,
+    LOGICAL_AND = 279,
+    LOGICAL_OR = 280,
+    STAR_EQUAL = 281,
+    BY_EQUAL = 282,
+    PERCENT_EQUAL = 283,
+    PLUS_EQUAL = 284,
+    MINUS_EQUAL = 285,
+    SINGLE_COMMENT = 286,
+    MULTI_COMMENT = 287
   };
 #endif
 /* Tokens.  */
-#define ID 258
-#define NUM 259
-#define DO 260
-#define WHILE 261
-#define LE 262
-#define GE 263
-#define EQ 264
-#define NE 265
-#define OR 266
-#define AND 267
-#define STR_CONST 268
-#define KEYWORD 269
-#define UMINUS 270
+#define BREAK_KEYWORD 258
+#define RETURN_KEYWORD 259
+#define VOID_KEYWORD 260
+#define FLOAT_KEYWORD 261
+#define CHAR_KEYWORD 262
+#define WHILE_KEYWORD 263
+#define INT_KEYWORD 264
+#define DOUBLE_KEYWORD 265
+#define IDENTIFIER 266
+#define INTEGER_CONSTANT 267
+#define FLOAT_CONSTANT 268
+#define CHAR_CONSTANT 269
+#define STRING_LITERAL 270
+#define PLUS_PLUS 271
+#define MINUS_MINUS 272
+#define LEFT_SHIFT 273
+#define RIGHT_SHIFT 274
+#define LESS_EQUAL 275
+#define GREATER_EQUAL 276
+#define EQUAL_EQUAL 277
+#define NOT_EQUAL 278
+#define LOGICAL_AND 279
+#define LOGICAL_OR 280
+#define STAR_EQUAL 281
+#define BY_EQUAL 282
+#define PERCENT_EQUAL 283
+#define PLUS_EQUAL 284
+#define MINUS_EQUAL 285
+#define SINGLE_COMMENT 286
+#define MULTI_COMMENT 287
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+
+union YYSTYPE
+{
+#line 10 "yacc.y" /* yacc.c:1909  */
+
+  int intval;
+  float floatval;
+  char *charval;
+
+#line 124 "y.tab.h" /* yacc.c:1909  */
+};
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
