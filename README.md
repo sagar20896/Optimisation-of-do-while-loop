@@ -1,2 +1,2 @@
-# Optimisation-of-do-while-loop
-Optimisation of do-while loop in Compiler design
+Run the script to execute all the
+"./script" to run the script
