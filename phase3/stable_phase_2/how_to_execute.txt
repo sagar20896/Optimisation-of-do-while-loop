@@ -1,5 +1,0 @@
-lex myfile1.l
-
-yacc -d myfile1.y
-
-gcc  y.tab.c -ll -ly

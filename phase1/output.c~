@@ -1,7 +1,0 @@
-do {
-	int a = 0;
-	int b_a = 10;
-	int 23ere = 10;
-	int __abc = 20;
-	
-} while (  );

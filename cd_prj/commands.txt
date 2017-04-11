@@ -1,7 +1,0 @@
-yacc yacc.y -dy
-lex new.l
-g++ -c y.tab.c
-g++ -c lex.yy.c
-g++-6 -c -Wno-write-strings lex.cpp
-g++ lex.o lex.yy.o y.tab.o -ll -ly
-./a.out
