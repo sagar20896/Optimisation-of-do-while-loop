@@ -47,47 +47,49 @@ extern int yydebug;
   {
     ID = 258,
     NUM = 259,
-    DO = 260,
-    WHILE = 261,
-    IF = 262,
-    ELSE = 263,
-    LE = 264,
-    GE = 265,
-    EQ = 266,
-    NE = 267,
-    OR = 268,
-    AND = 269,
-    PRINTF = 270,
-    INT = 271,
-    FLOAT = 272,
-    CHAR = 273,
-    SPACE = 274,
-    UMINUS = 275
+    WHILE = 260,
+    LE = 261,
+    GE = 262,
+    EQ = 263,
+    NE = 264,
+    OR = 265,
+    AND = 266,
+    TYPE = 267,
+    STRING = 268,
+    PRINTF = 269,
+    NEWLINE = 270,
+    DO = 271,
+    UMINUS = 273
   };
 #endif
 /* Tokens.  */
 #define ID 258
 #define NUM 259
-#define DO 260
-#define WHILE 261
-#define IF 262
-#define ELSE 263
-#define LE 264
-#define GE 265
-#define EQ 266
-#define NE 267
-#define OR 268
-#define AND 269
-#define PRINTF 270
-#define INT 271
-#define FLOAT 272
-#define CHAR 273
-#define SPACE 274
-#define UMINUS 275
+#define WHILE 260
+#define LE 261
+#define GE 262
+#define EQ 263
+#define NE 264
+#define OR 265
+#define AND 266
+#define TYPE 267
+#define STRING 268
+#define PRINTF 269
+#define NEWLINE 270
+#define DO 271
+#define UMINUS 273
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+typedef union YYSTYPE YYSTYPE;
+union YYSTYPE
+{
+#line 36 "dowhile.y" /* yacc.c:1909  */
+
+	char* st;
+
+#line 92 "y.tab.h" /* yacc.c:1909  */
+};
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

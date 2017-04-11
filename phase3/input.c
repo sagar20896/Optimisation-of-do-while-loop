@@ -1,8 +1,6 @@
-do
-{
-    a = a + 1
-    int id=34;
-    float fl=90.887;
-    char ch='A';
-    printf("%d %c %c ",id,fl,ch);
-}while (a>b);
+do{
+    c = 10;
+    d = 20;
+    a = c + 17;
+    b = d + 15;
+}while((1+2)<(2+3));

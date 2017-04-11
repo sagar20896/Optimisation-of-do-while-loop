@@ -49,15 +49,20 @@ extern int yydebug;
     NUM = 259,
     DO = 260,
     WHILE = 261,
-    LE = 262,
-    GE = 263,
-    EQ = 264,
-    NE = 265,
-    OR = 266,
-    AND = 267,
-    STR_CONST = 268,
-    KEYWORD = 269,
-    UMINUS = 270
+    IF = 262,
+    ELSE = 263,
+    LE = 264,
+    GE = 265,
+    EQ = 266,
+    NE = 267,
+    OR = 268,
+    AND = 269,
+    PRINTF = 270,
+    INT = 271,
+    FLOAT = 272,
+    CHAR = 273,
+    SPACE = 274,
+    UMINUS = 275
   };
 #endif
 /* Tokens.  */
@@ -65,15 +70,20 @@ extern int yydebug;
 #define NUM 259
 #define DO 260
 #define WHILE 261
-#define LE 262
-#define GE 263
-#define EQ 264
-#define NE 265
-#define OR 266
-#define AND 267
-#define STR_CONST 268
-#define KEYWORD 269
-#define UMINUS 270
+#define IF 262
+#define ELSE 263
+#define LE 264
+#define GE 265
+#define EQ 266
+#define NE 267
+#define OR 268
+#define AND 269
+#define PRINTF 270
+#define INT 271
+#define FLOAT 272
+#define CHAR 273
+#define SPACE 274
+#define UMINUS 275
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
