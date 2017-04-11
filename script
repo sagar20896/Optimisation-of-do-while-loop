@@ -9,6 +9,20 @@ yacc -d dowhile.y
 gcc lex.yy.c y.tab.c -ll -ly
 cd ../phase2
 reset
+echo PHASE-2:
+echo input:
+cat input.c
+echo
+echo
+echo output:
 ./a.out
+echo
+echo
 cd ../phase3
+echo PHASE-3:
+echo input:
+cat input.c
+echo
+echo
+echo output:
 ./a.out
